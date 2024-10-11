@@ -47,6 +47,7 @@ def is_special(password):
 # The password must have been verified the pattern checker
 def is_pattern(password):
     if has_repeating_pattern(password) and has_sequenced_chars(password) and has_consecutive_characters(password):
-        print("Please update the password since it is weak as of now.")
-    elif not has_repeating_pattern(password) and has_sequenced_chars(password) and has_consecutive_characters(password):
         return False
+    else:
+        return True
+

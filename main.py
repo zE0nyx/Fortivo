@@ -1,35 +1,52 @@
 from functions import *
-
-"""
-This tool evaluates the password strength based on length, complexity, and entropy.
-"""
-print("The password must be at least 12 characters.")
-print("The password must include uppercase, lowercase, numbers, and special characters.")
-print("No dictionary words, names, easily guessable characters and common patterns.")
+import argparse
 
 
-def password_check():
-    password = input("Enter the password: ")
+# """
+# This tool evaluates the password strength based on length, complexity, and entropy.
+# """
 
+
+def password_check(password):
+    # Return False if any of the password checks fail, True otherwise
     if not length(password):
-        password_check()
-    else:
-        if not is_upper(password):
-            password_check()
-        else:
-            if not is_lower(password):
-                password_check()
-            else:
-                if not is_num(password):
-                    password_check()
-                else:
-                    if not is_special(password):
-                        password_check()
-                    else:
-                        if is_pattern(password):
-                            password_check()
-                        else:
-                            print(f"You have made a strong password {password}")
+        print("Password is too short, it must be atleast 12 characters.")
+        return False
+
+    if not is_upper(password):
+        print("Password must include at least one uppercase letter.")
+        return False
+
+    if not is_lower(password):
+        print("Password must include at least one lowercase letter.")
+        return False
+
+    if not is_num(password):
+        print("Password must include at least one number.")
+        return False
+
+    if not is_special(password):
+        print("Password must include at least one special character.")
+        return False
+
+    if is_pattern(password):
+        print("Password contains common patterns or dictionary words.")
+        return False
+
+    print(f"You have made a strong password: {password}")
+    return True
 
 
-password_check()
+# Setup argparse
+parser = argparse.ArgumentParser(prog='fortivo',
+                                 description='This tool evaluates the password strength based on length, '
+                                             'complexity, and entropy.',
+                                 epilog='Remember to follow me at https://github.com/zE0nyx')
+
+parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.0')
+parser.add_argument('password', type=str, help='Password to evaluate')
+
+# Parse arguments
+args = parser.parse_args()
+password_check(args.password)
+
