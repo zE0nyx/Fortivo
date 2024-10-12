@@ -8,3 +8,6 @@
   
   **No Common or Guessable Passwords:** Detects and rejects passwords that use common dictionary words (rockyou.txt), names, or easily guessable patterns. Ensures no repetitive or predictable patterns (e.g., "12345" or "password123").
 
+# Usage
+      python3 fortivo.py 'A12ch4r4ct3rP4s5wOrd'
+   Run the python file using a password as the argument
