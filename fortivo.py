@@ -37,8 +37,7 @@ def password_check(password):
     return True
 
 
-def main():  # Add this function
-    # Setup argparse
+def main():
     parser = argparse.ArgumentParser(prog='fortivo',
                                      description='This tool evaluates the password strength based on length, '
                                                  'complexity, and entropy.',
@@ -47,7 +46,7 @@ def main():  # Add this function
     parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.0')
     parser.add_argument('password', type=str, help='Password to evaluate')
 
-    # Parse arguments
+    
     args = parser.parse_args()
     password_check(args.password)
 
