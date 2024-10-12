@@ -10,4 +10,4 @@
 
 # Usage
       python3 fortivo.py 'A12ch4r4ct3rP4s5wOrd'
-   Run the main file using a password as the argument
+   Run the python file using a password as the argument
