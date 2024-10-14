@@ -15,8 +15,8 @@ setup(
     description='This tool evaluates the password strength based on length, complexity, and entropy.',
     long_description=open('README.md').read(),  # Read from a README file
     long_description_content_type='text/markdown',
-    author='Your Name',
-    author_email='your_email@example.com',
+    author='ze0nyx',
+    author_email='iamze0official@gmail.com',
     url='https://github.com/zE0nyx',
     classifiers=[
         'Programming Language :: Python :: 3',
