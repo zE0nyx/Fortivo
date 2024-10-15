@@ -38,6 +38,7 @@ def password_check(password):
 
     print(f"You have made a strong password: {password}")
     return True
+print("=========================")
 
 
 def main():
