@@ -7,7 +7,8 @@ import pyfiglet
 # """
 ascii_banner = pyfiglet.figlet_format("Fortivo")
 print(ascii_banner)
-print("\n-------------------------")
+print("-------------------------")
+print("-------------------------")
 
 def password_check(password):
     # Return False if any of the password checks fail, True otherwise
