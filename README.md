@@ -11,9 +11,13 @@
 # Setup
       git clone "https://github.com/zE0nyx/Fortivo.git"
       cd Fortivo
-      python setup.py install
-In case of issue in installation use python3 instead of python
 
 # Usage
-      python3 fortivo.py 'A12ch4r4ct3rP4s5wOrd'
+      python3 fortivo.py 'A12ch4r4ct3rP4$5wOrd'
    Run the python file using a password as the argument
+
+## Contributing
+Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request.
+
+## Liscence
+This project is not officially licensed. Feel free to use it as you see fit.
