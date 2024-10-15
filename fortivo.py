@@ -6,8 +6,8 @@ import pyfiglet
 # This tool evaluates the password strength based on length, complexity, and entropy.
 # """
 ascii_banner = pyfiglet.figlet_format("Fortivo")
-print(ascii_banner"\n")
-print("-------------------------")
+print(ascii_banner)
+print("\n-------------------------")
 
 def password_check(password):
     # Return False if any of the password checks fail, True otherwise
