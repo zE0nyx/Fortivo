@@ -38,7 +38,7 @@ def password_check(password):
 
     print(f"You have made a strong password: {password}")
     return True
-print("=========================")
+
 
 
 def main():
@@ -53,7 +53,7 @@ def main():
     
     args = parser.parse_args()
     password_check(args.password)
-
+    print("=========================")
 
 if __name__ == '__main__':
     main()
